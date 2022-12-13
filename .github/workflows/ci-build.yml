@@ -1,0 +1,14 @@
+# bluemarble
+# vim: ts=4 expandtab
+name: ci-build
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: compile
+      shell: bash
+      run: make
